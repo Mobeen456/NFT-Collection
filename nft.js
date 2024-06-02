@@ -1,23 +1,22 @@
 let a = [];
 
-function mintNFT(name, description, rarity) {
+function mintNFT(_name, _description, _rarity) {
     let newNFT = {
-        name: name,
-        description: description,
-        rarity: rarity
+        "name": _name,
+        "description": _description,
+        "rarity": _rarity
     };
     a.push(newNFT);
 }
 
 function listNFTs() {
-    a.forEach (
-        function(nft) 
+    for(let i=0 ; i<a.length ; i++)
         {
-            console.log("Name: " + nft.name);
-            console.log("Description: " + nft.description);
-            console.log("Rarity: " + nft.rarity);
+            console.log("Name: " + a[i].name);
+            console.log("Description: " + a[i].description);
+            console.log("Rarity: " + a[i].rarity);
             console.log("----------------------");
-    });
+    }
 }
 
 function getTotalSupply() {
